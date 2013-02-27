@@ -122,6 +122,10 @@
 		189FEB1816DDA8F300756752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189FEB1716DDA8F300756752 /* AppDelegate.m */; };
 		189FEB1B16DDA8F300756752 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189FEB1A16DDA8F300756752 /* RootViewController.m */; };
 		189FEB1E16DDA8F300756752 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 189FEB1D16DDA8F300756752 /* HelloWorldLayer.m */; };
+		189FEB2E16DDA91000756752 /* CCScrollContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 189FEB2716DDA91000756752 /* CCScrollContentLayer.m */; };
+		189FEB2F16DDA91000756752 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 189FEB2916DDA91000756752 /* CCScrollLayer.m */; };
+		189FEB3016DDA91000756752 /* CCTableLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 189FEB2B16DDA91000756752 /* CCTableLayer.m */; };
+		189FEB3116DDA91000756752 /* CCTableLayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189FEB2D16DDA91000756752 /* CCTableLayerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,6 +364,14 @@
 		189FEB1C16DDA8F300756752 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		189FEB1D16DDA8F300756752 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		189FEB1F16DDA8F300756752 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		189FEB2616DDA91000756752 /* CCScrollContentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollContentLayer.h; sourceTree = "<group>"; };
+		189FEB2716DDA91000756752 /* CCScrollContentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollContentLayer.m; sourceTree = "<group>"; };
+		189FEB2816DDA91000756752 /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
+		189FEB2916DDA91000756752 /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
+		189FEB2A16DDA91000756752 /* CCTableLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableLayer.h; sourceTree = "<group>"; };
+		189FEB2B16DDA91000756752 /* CCTableLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableLayer.m; sourceTree = "<group>"; };
+		189FEB2C16DDA91000756752 /* CCTableLayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableLayerCell.h; sourceTree = "<group>"; };
+		189FEB2D16DDA91000756752 /* CCTableLayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableLayerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +428,7 @@
 		189FE9C416DDA8F100756752 /* CCTableLayerTest */ = {
 			isa = PBXGroup;
 			children = (
+				189FEB2516DDA8FE00756752 /* CCTableLayer */,
 				189FEB1616DDA8F300756752 /* AppDelegate.h */,
 				189FEB1716DDA8F300756752 /* AppDelegate.m */,
 				189FEB1916DDA8F300756752 /* RootViewController.h */,
@@ -758,6 +771,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		189FEB2516DDA8FE00756752 /* CCTableLayer */ = {
+			isa = PBXGroup;
+			children = (
+				189FEB2616DDA91000756752 /* CCScrollContentLayer.h */,
+				189FEB2716DDA91000756752 /* CCScrollContentLayer.m */,
+				189FEB2816DDA91000756752 /* CCScrollLayer.h */,
+				189FEB2916DDA91000756752 /* CCScrollLayer.m */,
+				189FEB2A16DDA91000756752 /* CCTableLayer.h */,
+				189FEB2B16DDA91000756752 /* CCTableLayer.m */,
+				189FEB2C16DDA91000756752 /* CCTableLayerCell.h */,
+				189FEB2D16DDA91000756752 /* CCTableLayerCell.m */,
+			);
+			name = CCTableLayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -925,6 +953,10 @@
 				189FEB1816DDA8F300756752 /* AppDelegate.m in Sources */,
 				189FEB1B16DDA8F300756752 /* RootViewController.m in Sources */,
 				189FEB1E16DDA8F300756752 /* HelloWorldLayer.m in Sources */,
+				189FEB2E16DDA91000756752 /* CCScrollContentLayer.m in Sources */,
+				189FEB2F16DDA91000756752 /* CCScrollLayer.m in Sources */,
+				189FEB3016DDA91000756752 /* CCTableLayer.m in Sources */,
+				189FEB3116DDA91000756752 /* CCTableLayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

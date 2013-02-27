@@ -34,21 +34,15 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
-		
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
-
-		// ask director the the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
-		
-		// add the label as a child to this Layer
-		[self addChild: label];
+		_tableLayer = [[CCTableLayer alloc]init];
+        _tableLayer.delegate = self;
+        _tableLayer.dataSource = self;
+        _tableLayer.contentSize = self.contentSize;
+        [self addChild:_tableLayer];
 	}
 	return self;
 }
+
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
@@ -60,4 +54,35 @@
 	// don't forget to call "super dealloc"
 	[super dealloc];
 }
+
+- (CGFloat)tableLayer:(CCTableLayer *)tableLayer heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+
+- (int)tableLayer:(CCTableLayer *)tableLayer numberOfRowsInSection:(NSInteger)section
+{
+    return 15;
+}
+
+- (CCTableLayerCell *)tableLayer:(CCTableLayer *)tableLayer cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CCTableLayerCell *cell = [tableLayer dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[CCTableLayerCell alloc]initWithReuseIdentifier:@"cell"];
+        
+    }
+    [cell removeAllChildrenWithCleanup:YES];
+    CCLabelTTF *label = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",indexPath.row] fontName:@"GillSans" fontSize:10];
+    label.anchorPoint = CGPointZero;
+    label.color = ccWHITE;
+    [cell addChild:label];
+    return cell;
+}
+
+- (void)tableLayer:(CCTableLayer *)tableLayer cellNeedDelete:(CCTableLayerCell *)cell
+{
+    
+}
+
 @end

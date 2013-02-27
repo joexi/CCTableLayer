@@ -9,10 +9,11 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
-
+#import "CCTableLayer.h"
 // HelloWorldLayer
-@interface HelloWorldLayer : CCLayer
+@interface HelloWorldLayer : CCLayer <CCTableLayerDelegate,CCTableLayerDataSource>
 {
+    CCTableLayer *_tableLayer;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
